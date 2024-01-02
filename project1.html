@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<!-- Header -->
+							<header id="header">
+								<a href="index.html" class="logo"><strong>Cristina Gomez</strong> MS Business Analytics</a>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Customer Classification</h1>
+										<h1>for Bank Marketing Campaign</h1>
+									</header>
+
+									<p>
+									Improvement of acceptance rate from 1 in 10 to a predicted acceptance rate of 1 in 3 by using machine learning to classify cusomers who are likely to accept a bank product offer.  Link to My Code: <a href="https://colab.research.google.com/drive/1pShuFwjrBWSwe5X9lJ5pGc-6hOMLveH8?usp=sharing">Colab Notebook</a>
+									</p>
+
+									<hr class="major" />
+
+									<h2>Background</h2>
+									<p>A Portuguese bank has run direct marketing campaigns to offer customers a term deposit product. They have contacted customers via 1 or more phone call and have seen some success. By reviewing if they can more accurately predict which customers may accept their offer, they can be more efficient when repeating this campaign.  This project was completed to review various classification machine learning models in order to compare and contrast the different models.
+									</p>
+
+									<p>Data Source: <a href="https://archive.ics.uci.edu/dataset/222/bank+marketing">UC Irvine Machine Learning Repository</a>
+									</p>
+
+								
+									<hr class="major" />
+
+									<h2>Models Implemented</h2>
+
+									<!-- Table -->
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Model</th>
+													<th>Mode of Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Logistic Regression</td>
+													<td>Mathematically powered model that classifies based on how the data fits an S shaped line.  Training creates the S shaped regression equation where new data can be scored with.</td>
+												</tr>
+												<tr>
+													<td>Decision Tree Classifier</td>
+													<td>Model that classifies by splitting the data based on if-else questions creating a hierarchy of nodes.  The split is determined by maximizing the information gain.  These decisions create decision regions that can be used to score new data.</td>
+												</tr>
+												<tr>
+													<td>Random Forest Classifier</td>
+													<td>Using a decision tree as its base estimator, this model will introduce more randomization by repeating training multiple times using a different bootstrap training set.</td>
+												</tr>
+												<tr>
+													<td>K Nearest Neighbors</td>
+													<td>Data driven model that classifies based on the nearest records determined by their Euclidean distance.  New data can be compared to the nearest records to be scored.</td>
+												</tr>
+												<tr>
+													<td>Support Vector Machine</td>
+													<td>A model that classifies based on a linear line.  This method creates a margin that attempts to separate the data into two classes.</td>
+												</tr>
+												<tr>
+													<td>Voting Classifier</td>
+													<td>This model is an ensemble learning model that runs different models and makes the final prediction based on what the previous models “voted”</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+
+									<hr class="major" />
+
+									<h2>Models Evaluation Criteria</h2>
+									<p>We will evaluate the models using their confusion matrix.  We are especially interested in models that have a high precision.  This will help us deploy a model that can select the most likely candidates for a bank offer from a larger dataset and lead to a better return on investment.   
+									</p>
+									<p>Being predicted to be a viable sale will result in a sales call.  In this case, recall is not as important because it is more important that we maximize the amount of true positives.  
+									</p>
+
+									<hr class="major" />
+
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h2>Analysis & Results</h2>
+											<div class="col-6 col-12-small">
+
+												<h4>Steps taken</h4>
+												<ul>
+													<li>Import dataset & review documentation</li>
+													<li>Initial analysis & exploration</li>
+													<li>Data preparation for machine learning</li>
+													<li>Classification models</li>
+													<li>Modify data to account for unbalanced classes</li>
+													<li>Review Results</li>
+												</ul>
+											<h4>Model Results</h4>
+											<span class="image main"><img src="images/project1_results.jpg" alt="" /></span>
+			
+									</div>
+										</div>
+										<div class="col-6 col-12-small">
+											<h2>Feature Importance</h2>
+											<p>The models had differing feature importance breakdowns.  Additional feature selection can be completed by removing features that are not significant for the model.  This may also improve the model efficiencies
+											</p>
+											<span class="image main"><img src="images/project1_featureimportance.jpg" alt="" /></span>
+										</div>
+									</div>
+
+
+									<hr class="major" />
+
+									<h2>Conclusions</h2>
+									<p>The best performing model was the Logistic Regressor with an accuracy of 88%.  Some of the other models were observed to be overfitting, such as the tree classifiers.  This is one of the optimizations may be possible.  Sampling methods had a negative effect on the performance of the classifiers with this dataset.  It is critical to conduct thorough exploration and review of documentation to ensure effectiveness at deployment
+									</p>
+
+									<hr class="major" />
+
+									<h2>Recommendations</h2>
+									<p>Logistic regression resulted in almost 1 in 3 records accurately predicted whether a customer accepted the offer (30% precision).  This has improved the original campaign that had a 9% acceptance rate.  This model can be used to improve campaign performance in the future. Asking for contact preferences & customizing the method of marketing to those preferences may promote future success.  Aligning campaigns to seasonal trends can also help the bank have better conversion rates.  For example, this campaign historically performed better in Dec, Mar, Oct, and Sept.
+									</p>
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">Projects</span>
+
+											<ul>
+												<li><a href="project1.html">Project 1</a></li>
+												<li><a href="project2.html">Project 2</a></li>
+												<li><a href="https://github.com/Degri95/Final_Project/blob/main/README.md">Project 3</a></li>
+											</ul>
+										<li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">cristinagomez5713@gmail.com</a></li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
